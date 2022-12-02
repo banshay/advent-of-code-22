@@ -9,9 +9,12 @@ fun main() {
 
     // test if implementation meets criteria from the description, like:
     val testInput = readInput("Day01_test")
-    check(part1(testInput) == 1)
+    check(testInput.size == 1)
+
+    println("test part1: ${part1(testInput)}")
+    println("test part2: ${part2(testInput)}")
 
     val input = readInput("Day01")
-    println(part1(input))
-    println(part2(input))
+    println("result part1: ${part1(input)}")
+    println("result part2: ${part2(input)}")
 }
