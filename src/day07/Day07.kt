@@ -9,7 +9,7 @@ fun main() {
             .forEach { it.accept(filesystem) }
 
         val threshold: Long = 100_000
-        return filesystem.root.flatten().filter { it.size() <= threshold }.fold(0L) { acc, it -> acc + it.size() }
+        return filesystem.root.flatten().filter { it.size() <= threshold }.sumOf { it.size() }
     }
 
     fun part2(input: List<String>): Long {
